@@ -1,0 +1,61 @@
+[project]
+name            = "C++ Project"    # project name, it will be used as main exe too
+version         = "1.0.0"          # version, will be applied in CMakeLists.txt
+type            = "exe"            # "exe" | "lib" (don't tweak this property, lib not supported yet)
+description     = "My C++ project" # description, it will be applied in CMakeLists.txt
+
+[build]
+generator       = "auto"     # auto | Ninja | "Visual Studio 17 2022" | "Unix Makefiles"
+toolchain       = "auto"     # auto | msvc | llvm | gnu
+config          = "Release"  # Release | Debug
+jobs            = 0          # number of cores to use, 0 for auto cpu_count()
+build_docs      = false
+build_examples  = false
+build_deps      = true       # build dependecies
+shared_libs     = true       # build libs as .dll (may have some problems)
+defines         = []         # extra CMake defines example: ["BUILD_SHARED_LIBS", "BUILD_DOCS"]
+
+[build.flags]
+CMAKE_CXX_FLAGS = "-Wno-deprecated"
+CMAKE_C_FLAGS   = "-Wno-deprecated"
+
+[main]
+create          = true       # should have main.name as main executable
+name            = "auto"     # ""/auto (project name will be used) | manual name
+
+[test]
+enabled         = true       # tests enabled?
+
+[run.executables.main]       # duplicate the table and replace "main" with exe name
+args            = []         # args to pass to target executable
+show_console    = true       # open a separate console window
+wait            = false      # wait for exe to finish (blocking)
+enabled         = true       # run executable?
+
+[paths]
+build_dir       = "build"
+output_dir      = "output"
+output_bin      = "output/bin"
+output_lib      = "output/lib"
+dist_dir        = "dist"
+temp_dir        = "temp"
+assets_dir      = "assets"
+data_dir        = "data"
+tools_dir       = "tools"
+compressors_dir = "tools/compressors"
+
+[package]
+formats         = ["zip"]              # zip | tar.gz | tar.xz | 7z
+include         = ["assets", "config", "data", "README.md", "LICENSE"]  # included dirs
+name_template   = "{name}-{version}-{platform}-{arch}-{config}" # package name format
+
+[compress]
+enabled         = true                 # if enabled, selected exectuables through targets property will be compressed with the selected compressor
+tool            = "upx"                # compressor tool to use
+args            = ["--best", "--lzma"] # compressor-specific extra args
+targets         = ["main", "yemmak", "output/bin/**/*.dll"] # exe names, main, or glob patterns
+keep_original   = true                 # make .bak copy for original exe
+
+[log]
+color           = true                 # enable colored output logs
+verbose         = false                # show debug logs

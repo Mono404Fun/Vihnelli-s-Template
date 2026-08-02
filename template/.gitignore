@@ -1,0 +1,7 @@
+/build/
+output/bin/
+output/lib/
+output/dist/
+deps/fetch/content
+deps/vendor/*
+!deps/vendor/CMakeLists.txt
