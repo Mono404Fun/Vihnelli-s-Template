@@ -17,7 +17,36 @@
 
 ---
 
-> ⚠ Note: After cloning the template, replace this file with your project's README.md file.
+> ⚠️ **Note** After cloning the template, replace this file with your project's README.md file.
+> 
+> ⚠️ **Current Limitations**
+>
+> The `project.py` testing command is available, but full project testing support is not implemented yet.
+>
+> Currently:
+>
+> - `python project.py test` exists and integrates with the workflow.
+> - Real test discovery, test configuration, and complete testing infrastructure are **not fully supported yet**.
+>
+> Full testing support is planned to be improved in future releases.
+>
+> project.py is not guaranteed to work on Unix based systems.
+>
+> Library projects are also **not fully supported yet**. Setting:
+>
+> ```toml
+> [project]
+> type = "lib"
+> ```
+>
+> may result in configuration or build errors.
+>
+> For now, Vihnelli's Template is designed primarily for executable projects:
+>
+> ```toml
+> [project]
+> type = "exe"
+> ```
 
 ## 📌 Overview
 
@@ -675,33 +704,6 @@ LICENSE
 for details.
 
 ---
-
-> ⚠️ **Current Limitations**
->
-> The `project.py` testing command is available, but full project testing support is not implemented yet.
->
-> Currently:
->
-> - `python project.py test` exists and integrates with the workflow.
-> - Real test discovery, test configuration, and complete testing infrastructure are **not fully supported yet**.
->
-> Testing support is planned to be improved in future releases.
->
-> Library projects are also **not fully supported yet**. Setting:
->
-> ```toml
-> [project]
-> type = "lib"
-> ```
->
-> may result in configuration or build errors.
->
-> For now, Vihnelli's Template is designed primarily for executable projects:
->
-> ```toml
-> [project]
-> type = "exe"
-> ```
 
 <p align="center">
   Made with ❤️ by Vihnelli, for C++ developers
