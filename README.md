@@ -17,6 +17,8 @@
 
 ---
 
+> ⚠ Note: After cloning the template, replace this file with your project's README.md file.
+
 ## 📌 Overview
 
 **Vihnelli's Template** is a complete C++ project foundation designed for developers who want a clean, scalable, and automated workflow.
