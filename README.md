@@ -632,16 +632,6 @@ while you focus on development.
 
 ---
 
-### Getting Started
-To get started, clone the repository and run the `project.py` script to configure and build your project.
-
-```bash
-git clone https://github.com/
-cd <project-directory>
-python project.py configure
-python project.py build
-```
-
 
 # 📜 License
 
