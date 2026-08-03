@@ -101,48 +101,75 @@ Start developing 🚀
 A generated project follows this layout:
 
 ```text
-MyProject/
+📦 Vihnelli's Template
+├── 📄 CMakeLists.txt                 # main cmake entry point
+├── 📄 CMakePresets.json              # ready-to-use build presets
+├── 📄 CMakeUserPresets.json          # your local build settings
+├── 📄 README.md                      # getting started guide
+├── 📄 LICENSE                        # license information
+├── 🐍 project.py                     # build and project manager
+├── 📄 project.toml                   # project configuration
 │
-├── CMakeLists.txt
-├── CMakePresets.json
-├── project.toml
-├── project.py
-├── README.md
-├── LICENSE
+├── 📁 assets/                        # project resources
+│   ├── 📁 fonts/                     # custom fonts
+│   ├── 📁 icons/                     # application icons
+│   ├── 📁 images/                    # images and textures
+│   ├── 📁 music/                     # background music
+│   └── 📁 sound/                     # sound effects
 │
-├── cmake/
-│   ├── config.cmake
-│   ├── compiler.cmake
-│   ├── options.cmake
-│   └── warnings.cmake
+├── 📁 cmake/                         # shared cmake files
+│   ├── 📄 build_options.cmake        # build options
+│   ├── 📄 compiler_options.cmake     # compiler settings
+│   ├── 📄 config.cmake               # global configuration
+│   ├── 📄 dirs.cmake                 # output directories
+│   ├── 📄 project_options.cmake      # project options
+│   ├── 📄 utils.cmake                # helper functions
+│   └── 📄 warns.cmake                # warning levels
 │
-├── src/
-│   ├── exe/
-│   │   └── my_project/
-│   │       ├── main.cpp
-│   │       └── CMakeLists.txt
-│   │
-│   ├── core/
-│   ├── logger/
-│   └── utils/
+├── 📁 config/                        # application configuration
+│   └── 📄 default.conf               # default settings
 │
-├── include/
+├── 📁 data/                          # generated application data
+│   ├── 📁 config/                    # saved settings
+│   ├── 📁 logs/                      # log files
+│   └── 📁 saves/                     # save files
 │
-├── tests/
+├── 📁 docs/                          # documentation
+├── 📁 examples/                      # example projects
 │
-├── assets/
-├── data/
+├── 📁 include/                       # public header files
+│   ├── 📁 app/                       # application api
+│   ├── 📁 core/                      # core components
+│   ├── 📁 general_/                  # shared code
+│   ├── 📁 logger/                    # logging system
+│   ├── 📁 platform/                  # platform-specific code
+│   └── 📁 utils/                     # utility helpers
 │
-├── tools/
-│   └── compressors/
+├── 📁 src/                           # source files
+│   ├── 📄 CMakeLists.txt             # source configuration
+│   ├── 📁 exe/                       # executable targets
+│   │   ├── 📄 CMakeLists.txt
+│   │   └── 📁 my_project/
+│   │       ├── 📄 CMakeLists.txt
+│   │       └── 📄 main.cpp           # application entry point
+│   └── 📁 lib/                       # library implementations
+│       ├── 📄 CMakeLists.txt
+│       ├── 📁 app/
+│       ├── 📁 core/
+│       ├── 📁 general_/
+│       ├── 📁 logger/
+│       ├── 📁 platform/
+│       └── 📁 utils/
 │
-├── build/
+├── 📁 tests/                         # unit tests
+│   ├── 📄 CMakeLists.txt
+│   └── 📁 unit/
+│       ├── 📄 CMakeLists.txt
+│       └── 📁 core/
+│           └── 📄 test.cpp
 │
-├── output/
-│   ├── bin/
-│   └── lib/
-│
-└── dist/
+├── 📁 tools/                         # external development tools
+└── 📁 screenshots/                   # images used in the README
 ```
 
 ---
